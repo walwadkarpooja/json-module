@@ -1,0 +1,53 @@
+<mvc:View controllerName="modules.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m" xmlns:core="sap.ui.core">
+    <Page id="page" title="{i18n>title}">
+    <!-- <content>
+
+    
+        <Input id="name" placeholder="Employee Name" value='{emModel>/name}'/>
+        <Input id="id" placeholder="Employee Id" value='{emModel>/id}'/>
+        <Input id="age" placeholder="Employee Age" value='{emModel>/age}'/>
+        <Input id="gender" placeholder="Employee Gender" value='{emModel>/gender}'/>
+        <Input id="designation" placeholder="Employee Designation" value='{emModel>/designation}'/>
+        <Button id="btn" text="Employee Information" press="onSubmit"/>
+    </content> -->
+    <content >
+        <VBox  id="formWrapper" backgroundDesign="Solid" width="50%" alignContent="Center" justifyContent="Center" alignItems="Center" >
+            <HBox columnGap="10px" alignContent="SpaceAround" width="100%" alignItems="Center" justifyContent="SpaceAround">
+                <Label id="sNameLabel" text="Student Name" width="200px"  />
+                <Input id="sName" placeholder="Student Name" value='{sModel>/name}' width="300px"/>
+            </HBox>
+            <HBox columnGap="10px" alignContent="SpaceAround" width="100%" alignItems="Center" justifyContent="SpaceAround">
+                <Label id="sIdLabel" text="Student Id" width="200px" />
+                <Input id="sId" placeholder="Student Roll no" value='{sModel>/roll_no}' width="300px"/>
+            </HBox>
+            <HBox columnGap="10px" alignContent="SpaceAround" width="100%" alignItems="Center" justifyContent="SpaceAround">
+                <Label id="sAgeLabel" text="Student Age" width="200px"/>
+                <Input id="sAge" placeholder="Student class" value='{sModel>/class}' width="300px"/>
+            </HBox>
+            <HBox columnGap="10px" alignContent="SpaceAround" width="100%" alignItems="Center" justifyContent="SpaceAround">
+                <Label id="sGenderLabel" text="Student Gender" width="200px"/>
+                <!-- <Input id="sGender" placeholder="Student Gender" value='{sModel>/gender}' width="300px"/> -->
+                <Select width="300px">
+                    <items>
+                        <core:Item text="Female" key="female" ></core:Item>
+                        <core:Item text="Male" key="male"></core:Item>
+                    </items>
+                </Select>
+            </HBox>
+            <HBox columnGap="10px" alignContent="SpaceAround" width="100%" alignItems="Center" justifyContent="SpaceAround">
+                <Label id="sDesignationLabel" text="Student Designation" width="200px"/>
+                <!-- <Input id="sDesignation" placeholder="Student subject" value='{sModel>/subject}' width="300px"/> -->
+                <ComboBox width="300px" items='{teamModel>/allTeams}'>
+                    <items>
+                        <core:Item key="{teamModel>value}" text="{teamModel>type}"></core:Item>
+                       
+                    </items>
+                </ComboBox>
+            </HBox>
+            <Button id="sBtn" text="Student Information" press="onInfo"/>
+        </VBox>
+    </content>
+    </Page>
+</mvc:View>
